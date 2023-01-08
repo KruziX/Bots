@@ -11,7 +11,6 @@ from aiogram.types import *
 bot = Bot(token='5325183488:AAFMiD29IxXGt3Jf1QxEc9TmyLMtQ5GqzcQ', parse_mode=types.ParseMode.HTML)
 keyboard = types.InlineKeyboardMarkup()
 dp = Dispatcher(bot)
-user = bot.get_me(response)
 
 logging.basicConfig(level=logging.INFO)
 
@@ -205,9 +204,7 @@ async def any_text_message(message: types.Message):
 😳 Как ты узнал об этой <b>секретной</b> команде?''', parse_mode='HTML')
     if message.text == '/dice':
            await bot.send_sticker(message.from_user.id, "CAACAgIAAxkBAAIzUWO6r1rB6u9rRPnfQMBvw-8ZclU-AAJcAANkYXEuySwsmkGqvE4tBA")
-    if message.text == '/ping':
-           await bot.send_message(message.from_user.id, print(user))
-      
+ 
 @dp.callback_query_handler(lambda c: c.data == "cb")
 async def test_function(query: types.CallbackQuery):
     await bot.answer_callback_query(query.id, "💻 Искал бота со всякими хакерскими штуками? Ты его нашёл!\n\n💟 У нас есть:\n👾 Скрипты ботов\n😈 Вирусы\n🌍 VPN\n📱 iOS Программы\n😱 И многое другое!\n\n\n🔗 @VersaceGangBot", show_alert=True)
