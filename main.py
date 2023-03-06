@@ -8,7 +8,7 @@ from aiogram.types import ReplyKeyboardRemove, \
     InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.types import *
 
-bot = Bot(token='5325183488:AAFMiD29IxXGt3Jf1QxEc9TmyLMtQ5GqzcQ', parse_mode=types.ParseMode.HTML)
+bot = Bot(token='5325183488:AAEmlzxXeUvIfjdsBLLyIZA82zglbcUkcWQ', parse_mode=types.ParseMode.HTML)
 keyboard = types.InlineKeyboardMarkup()
 dp = Dispatcher(bot)
 
